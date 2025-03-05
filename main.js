@@ -66,7 +66,7 @@ const fullPricedBook = discountedBooks.find(book => parseFloat(book.price) % 1 =
 
 // Snack 3 - Ordinare gli Autori    
 const authors = books.map(book => book.author)
-const areAuthorsAdults = authors.every(author => author > 18)
+const areAuthorsAdults = authors.every(author => author >= 18)
 
 authors.sort((a, b) => areAuthorsAdults ? a.age - b.age : b.age - a.age)
 
